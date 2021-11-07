@@ -9,8 +9,10 @@ form.addEventListener('submit', onFormSubmit)
 
 populateForm()
 
-function onFormInput(e) {
-  formData[e.target.name] = e.target.value
+function onFormInput() {
+  // formData[e.target.name] = e.target.value
+  formData = { email: form.email.value, message: form.message.value }
+
   const formDataStringified = JSON.stringify(formData)
   localStorage.setItem(STORAGE_KEY, formDataStringified)
 }
