@@ -10,7 +10,6 @@ form.addEventListener('submit', onFormSubmit)
 populateForm()
 
 function onFormInput() {
-  // formData[e.target.name] = e.target.value
   formData = { email: form.email.value, message: form.message.value }
 
   const formDataStringified = JSON.stringify(formData)
